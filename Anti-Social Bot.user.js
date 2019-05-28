@@ -55,11 +55,13 @@
             let closestFoe = null;
             for (let snake of unsafeWindow.snakes) {
                 if (snakeId != snake["id"]) {
-                    if (snake != null) {
-                        let dist = Math.pow(Math.pow(snake.xx - unsafeWindow.snake.xx, 2) + Math.pow(snake.yy - unsafeWindow.snake.yy, 2), 0.5);
-                        if (minCombinedDistance > dist) {
-                            minCombinedDistance = dist;
-                            closestFoe = snake;
+                    for (let point of snake.pts) {
+                        if (snake != null) {
+                            let dist = Math.pow(Math.pow(point.xx - unsafeWindow.snake.xx, 2) + Math.pow(point.yy - unsafeWindow.snake.yy, 2), 0.5);
+                            if (minCombinedDistance > dist) {
+                                minCombinedDistance = dist;
+                                closestFoe = point;
+                            }
                         }
                     }
                 }

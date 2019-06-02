@@ -80,7 +80,7 @@
 
                 unsafeWindow.xm = (closestFood.xx + offset - Math.round(unsafeWindow.snake.xx));
                 unsafeWindow.ym = (closestFood.yy - offset - Math.round(unsafeWindow.snake.yy));
-            }, 250);
+            }, 150);
         }
     };
 })();

@@ -31,11 +31,11 @@
                 }
 
                 if (closestFoe != null && minCombinedDistance < 550) {
-                    if (minCombinedDistance < 250) {
+                    /*if (minCombinedDistance < 250) {
                         unsafeWindow.setAcceleration(1);
                     } else {
                         unsafeWindow.setAcceleration(0);
-                    }
+                    }*/
 
                     unsafeWindow.xm = -(closestFoe.xx - Math.round(unsafeWindow.snake.xx));
                     unsafeWindow.ym = -(closestFoe.yy - Math.round(unsafeWindow.snake.yy));
